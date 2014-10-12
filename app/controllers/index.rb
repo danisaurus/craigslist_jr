@@ -22,11 +22,29 @@ end
 
 post '/signup' do
   @user = User.new(params[:user])
-  @user.save
+  if @user.save
   redirect '/'
+  else
+    erb :signup
+  end
+end
+
+before '/home' do
+  if authenticated?
+    pass
+  else
+    redirect '/'
+  end
 end
 
 get '/home' do
   @user = current_user
   erb :homepage
 end
+
+
+get '/logout' do
+  session.delete(:user_id)
+  redirect '/'
+end
+
