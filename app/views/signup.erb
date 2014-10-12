@@ -5,23 +5,23 @@
         <div class="small-12 medium-12 large-12 columns">
           <div class"row">
           <div class="small-12 medium-6 large-6 columns">
-            <input class="signup radius" type="text" name="user[first_name]" placeholder="First Name">
+            <input class="signup radius <%= display_error(@user, :first_name) %>" type="text" name="user[first_name]" placeholder="First Name">
           </div>
           <div class="small-12 medium-6 large-6 columns">
-            <input class="signup radius" type="text" name="user[last_name]" placeholder="Last Name">
+            <input class="signup radius <%= display_error(@user, :last_name) %>" type="text" name="user[last_name]" placeholder="Last Name">
           </div>
         </div>
         <div class="row">
           <div class="small-12 medium-6 large-6 columns">
-            <input class="signup radius" type="text" name="user[username]" placeholder="Username">
+            <input class="signup radius <%= display_error(@user, :username) %>" type="text" name="user[username]" placeholder="Username">
           </div>
           <div class="small-12 medium-6 large-6 columns">
-            <input class="signup radius" type="text" name="user[email]" placeholder="Email">
+            <input class="signup radius <%= display_error(@user, :email) %>" type="text" name="user[email]" placeholder="Email">
           </div>
         </div>
         <div class="row">
           <div class="small-12 medium-6 large-6 large-offset-3 columns">
-            <input class="signup radius" type="text" name="user[password]" placeholder="Password">
+            <input class="signup radius <%= display_error(@user, :password_hash) %>" type="text" name="user[password]" placeholder="Password">
           </div>
         </div>
         <div class="row">
