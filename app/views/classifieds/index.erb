@@ -1,0 +1,9 @@
+<% @categories.each do |category| %>
+  <h2><%= category.name %></h2>
+  <h3 class='categoryDescription'><%= category.description %></h3>
+  <ul>
+  <% category.classifieds.each do |classified| %>
+    <a href='/classifieds/<%= classified.id %>'><li><%= classified.title %></li></a>
+  <% end %>
+  </ul>
+<% end %>
