@@ -1,6 +1,6 @@
-
 class User < ActiveRecord::Base
 
+  has_many :classifieds
   validates :first_name, {presence: true}
   validates :last_name, {presence: true}
   validates :email, {presence: true, uniqueness: true}
@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   validates :password_hash, presence: true
 
 
-  # Remember to create a migration!
   def password
     @password ||= BCrypt::Password.new(password_hash)
   end

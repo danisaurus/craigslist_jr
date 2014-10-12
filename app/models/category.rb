@@ -1,3 +1,6 @@
 class Category < ActiveRecord::Base
-  # Remember to create a migration!
+
+  validates :name, uniqueness: true
+
+  has_many :classifieds
 end
