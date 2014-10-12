@@ -1,0 +1,20 @@
+<div id="loginPage">
+  <div class="row loginContent">
+    <div class="small-12 medium-5 large-5 columns">
+      <h1 class="header">Kegs<h1>
+      <h2 class="header medium-5 columns">List</h2>
+    </div>
+    <div class="small-12 medium-7 large-7 columns">
+      <form action="/" method="post">
+        <input class="login radius" type="text" name="user[email]" placeholder="Email">
+        <input class="login radius" type="text" name="user[password]" placeholder="Password">
+        <button class="button radius large-4 columns" type="submit" name="submit">Brew</button>
+      <form>
+      <p class="createAccount large-12 columns"><a href="/signup">Create an account</a><p>
+    </div>
+  </div>
+  <% if @message %>
+    <p class="loginError"><%= message %></p>
+  <% end %>
+</div>
+
