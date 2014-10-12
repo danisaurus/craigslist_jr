@@ -1,0 +1,22 @@
+<h2>Create Post</h2>
+<form action '/classifieds' method="post">
+  <input placeholder="Post Title" type="text" name="classified[title]">
+  <textarea placeholder="Whatchu Selling?" name="classified[description]"></textarea>
+  <input placeholder="condition" type="text" name="classified[condition]">
+  <input placeholder="location" type="text" name="classified[location]">
+  <input placeholder="Zip Code" type="text" name="classified[zip_code]">
+  <input placeholder="Price" type="text" name="classified[price]">
+  <select placeholder="Choose a Category" name="classified[category]">
+    <option value="">
+      Choose a Category
+    </option>
+    <% @categories.each do |category| %>
+      <option value="<%= category.id %>">
+        <%= category.name %>
+      </option>
+    <% end %>
+  </select>
+  <button class="post" name="submit" value="Submit">Submit</button>
+
+
+</end
