@@ -20,7 +20,7 @@ end
 
 15.times do
   Classified.create(title: Faker::Company.name,
-                    description: Faker::Company.catch_phrase,
+                    description: Faker::Lorem.paragraph(2),
                     condition:   Faker::Company.bs,
                     location:    Faker::Address.street_address,
                     zip_code:    Faker::Address.zip_code,

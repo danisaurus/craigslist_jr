@@ -5,7 +5,7 @@
         <div class="small-12 medium-12 large-12 columns">
           <div class"row">
           <div class="small-12 medium-6 large-6 columns">
-            <input class="signup radius <%= display_error(@user, :first_name) %>" type="text" name="user[first_name]" placeholder="First Name">
+            <input class="signup radius <%= display_error(@user, :first_name) %>" type="text" name="user[first_name]" value="<%= @user.first_name %>" placeholder="First Name">
           </div>
           <div class="small-12 medium-6 large-6 columns">
             <input class="signup radius <%= display_error(@user, :last_name) %>" type="text" name="user[last_name]" placeholder="Last Name">
