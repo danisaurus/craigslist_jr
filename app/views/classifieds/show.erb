@@ -1,2 +1,13 @@
-<p><%= @classified.title  %></p>
-<p><%= @classified.description %></p>
+<div id="classifiedContainer">
+  <div id="classifiedHeader">
+    <h2 class="classifiedHeader">$<span class="classifiedPrice"><%= @classified.price %></span> -   <span class="classifiedTitle"><%= @classified.title  %></h2>
+    <p class="classifiedLocation"><span class="classifiedCity"><%= @classified.location %><span class="classifiedZip"> <%= @classified.zip_code %></span></p>
+  </div>
+  <div id="classifiedSubhead">
+    <p class="classifiedSubhead"><%= @classified.condition %></p>
+  </div>
+  <div id="classifiedDescription">
+    <p class="classifiedDescription"><%= @classified.description %></p>
+  </div>
+</div>
+
