@@ -1,0 +1,64 @@
+.categoriesContainer {
+  width: 60%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 175px;
+  text-align: center;
+  margin: 30px auto 20px auto;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #de8642;;
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+
+
+.classifiedLink {
+  margin-bottom: 20px;
+
+}
+
+.date{
+  font-size: 13px;
+  color: #4b4d52;
+  margin-right: 10px;
+}
+
+
+.title {
+  font-size: 20px;
+  font-weight: 400;
+  margin-right: 10px;
+}
+
+a {
+  color: #de8642;
+}
+
+a:hover {
+  color: #DD7F37;
+  text-decoration: underline;
+}
+
+.price {
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  background: white;
+  border: 1px solid #b9b1a8;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: #918A81;
+}
+
+.location {
+  font-weight: 200;
+  margin-right: 10px;
+}
+
+.category {
+  font-size: 16px;
+}
+
+

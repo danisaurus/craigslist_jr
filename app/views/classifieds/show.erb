@@ -1,13 +1,21 @@
-<div id="classifiedContainer">
-  <div id="classifiedHeader">
-    <h2 class="classifiedHeader">$<span class="classifiedPrice"><%= @classified.price %></span> -   <span class="classifiedTitle"><%= @classified.title  %></h2>
-    <p class="classifiedLocation"><span class="classifiedCity"><%= @classified.location %><span class="classifiedZip"> <%= @classified.zip_code %></span></p>
+<link rel="stylesheet" href="/css/classified.css">
+
+<div class="classifiedContainer">
+  <div class="classifiedHeader">
+    <div class="date"><%= @classified.date_posted.strftime('%b %d') %>
+      <h2>
+          <span class="price">$<%= @classified.price %></span>
+          <span class="title"><%= @classified.title %></span>
+          <span class="city">(<%= @classified.location %>)</span>
+          <span class="reply">Reply</span>
+      </h2>
+    </div>
+  </div>
+  <div id="description">
+    <p class="classifiedDescription"><%= @classified.description %></p>
   </div>
   <div id="classifiedSubhead">
-    <p class="classifiedSubhead"><%= @classified.condition %></p>
-  </div>
-  <div id="classifiedDescription">
-    <p class="classifiedDescription"><%= @classified.description %></p>
+    <p class="condition"><strong>Condition: <%= @classified.condition %></strong></p>
   </div>
 </div>
 

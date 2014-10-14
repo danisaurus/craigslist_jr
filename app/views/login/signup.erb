@@ -1,0 +1,13 @@
+<%= erb :"/partials/_header" %>
+<div id="signupPage">
+  <div class="signupContent">
+      <h1 class="header">Sign Up<h1>
+      <form action="/signup" method="post">
+        <input class="signup radius <%= display_error(@user, :name) %>" type="text" name="user[first_name]" value="<%= @user.first_name %>" placeholder="Full Name">
+        <input class="signup radius <%= display_error(@user, :username) %>" type="text" name="user[username]" placeholder="Username">
+        <input class="signup radius <%= display_error(@user, :email) %>" type="text" name="user[email]" placeholder="Email">
+        <input class="signup radius <%= display_error(@user, :password_hash) %>" type="password" name="user[password]" placeholder="Password">
+        <button class="signup button radius signup button radius small-12 medium-4 large-4 large-offset-4 columns end" type="submit" name="submit">Start Brewing</button>
+      <form>
+  </div>
+</div>

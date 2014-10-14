@@ -1,0 +1,101 @@
+.newPostContainer {
+  width:50%;
+  margin: 30px auto 30px auto;
+  text-align: center;
+}
+
+.classifiedContainer {
+  width:60%;
+  margin: 100px auto 30px auto;
+}
+
+.newPostContainer select {
+  color: #808080;
+  border-radius: 0px !important;
+  background: white;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.classifiedHeader {
+  margin-bottom: 20px;
+}
+
+h2.create {
+  font-size: 125px;
+  text-align: center;
+  margin: 20px auto 20px auto;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #de8642;;
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+
+.date {
+  font-size: 16px;
+  color: #4b4d52;
+  margin-right: 10px;
+}
+
+.price {
+  font-size: 26px;
+  padding: 5px 10px 5px 10px;
+  background: white;
+  border: 1px solid #b9b1a8;
+  margin-right: 10px;
+  border-radius: 5px;
+  color: #918A81;
+}
+
+.title{
+  color: #4b4d52;
+  margin-right: 10px;
+  font-size: 28px;
+
+}
+
+.city {
+  font-size: 22px;
+  font-weight: 200;
+  margin-right: 10px;
+}
+
+
+.reply {
+  background: #de8642;
+  border-radius: 5px;
+  width: 65px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 10px 15px 10px 15px;
+  color: #ffffff;
+  letter-spacing: 1.5px;
+}
+
+.reply:hover {
+  background: #DD7F37;
+}
+
+.reply a {
+  color: #ffffff;
+}
+
+.reply a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+
+/* New Post */
+
+
+
+
+
+
+
+
+

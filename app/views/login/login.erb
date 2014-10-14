@@ -1,0 +1,21 @@
+<div id="loginPage">
+  <div class="row loginContent">
+    <div class="small-12 medium-6 large-6 columns">
+      <h1 class="header">Kegs<span class="list">List</span></h1>
+      <div class="subheader">Brewing Community</div>
+      <form action="/" method="post">
+        <input class="login radius" type="text" name="user[email]" placeholder="Email">
+        <input class="login radius" type="password" name="user[password]" placeholder="Password">
+        <button class="button radius" type="submit" name="submit">Brew</button>
+      <form>
+      <p class="createAccount"><a href="/signup">Create an account</a><p>
+    </div>
+    <div class="small-12 medium-6 large-6 columns">
+      <img class="beer" src="/images/beer_glass.png" width="75%">
+    </div>
+  </div>
+  <% if @message %>
+    <p class="loginError"><%= message %></p>
+  <% end %>
+</div>
+
