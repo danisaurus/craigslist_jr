@@ -1,9 +1,17 @@
-<% @categories.each do |category| %>
-  <h2><%= category.name %></h2>
-  <h3 class='categoryDescription'><%= category.description %></h3>
-  <ul>
-  <% category.classifieds.each do |classified| %>
-    <a href='/classifieds/<%= classified.id %>'><li><%= classified.title %></li></a>
+<link rel="stylesheet" href="/css/category.css">
+
+<div class="categoriesContainer">
+  <h2 class="yanone">Classifieds</h2>
+  <% @categories.each do |category| %>
+    <% category.classifieds.each do |classified| %>
+      <p class="classifiedLink">
+        <span class="favorite"></span>
+        <span class="date"><%= classified.date_posted.strftime('%b %d') %></span>
+        <a href='/classifieds/<%= classified.id %>'><span class="title"><%= classified.title %></span></a>
+        <span class="price">$<%= classified.price %></span>
+        <span class="location">(<%= classified.location%>)</span>
+        <span class="category"><%= classified.category.name %></span>
+      </p>
+    <% end %>
   <% end %>
-  </ul>
-<% end %>
+</div>

@@ -1,14 +1,17 @@
-<nav>
-<div class="kegs">Kegs<span class="list">List</span></div>
-<ul>
-	<li class="nav-link">Classifieds</li>
-	<li class="nav-link">What's Brewing</li>
-	<li class="nav-link">Grab A Beer</li>
-	<li class="nav-link">Community</li>
-	<li class="nav-link">Logout</li>
-	<li class="nav-link"></li>
+<link rel="stylesheet" href="/css/header.css">
 
-</ul>
-
-
+<nav class="box-shadow">
+  <div class="nav-inner">
+    <div class="kegs yanone">Kegs<span class="list">List</span></div>
+    <% if session[:user_id] != nil %>
+      <ul>
+      	<li class="nav-link">Classifieds</li>
+      	<li class="nav-link">What's Brewing</li>
+      	<li class="nav-link">Grab A Beer</li>
+      	<li class="nav-link">Community</li>
+      	<li><a href="/logout">Logout</a></li>
+        <li class="nav-post"><a href="/classifieds/new">Post</a></li>
+      </ul>
+    <% end %>
+  </div>
 </nav>

@@ -1,6 +1,6 @@
 get '/' do
   @user = User.new()
-  erb :login
+  erb :"/login/login", :layout => :'/login/login_layout'
 end
 
 
@@ -11,13 +11,13 @@ post '/' do
     redirect '/classifieds'
   else
     @message = "You've got the wrong ingredients. Try again."
-    redirect '/'
+    erb :"/login/login", :layout => :'/login/login_layout'
   end
 end
 
 get '/signup' do
   @user = User.new()
-  erb :signup
+  erb :"/login/signup", :layout => :'/login/login_layout'
 end
 
 post '/signup' do
@@ -25,7 +25,7 @@ post '/signup' do
   if @user.save
   redirect '/'
   else
-    erb :signup
+    erb :"/login/signup", :layout => :'/login/login_layout'
   end
 end
 

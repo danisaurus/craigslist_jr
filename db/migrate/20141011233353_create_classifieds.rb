@@ -7,6 +7,7 @@ class CreateClassifieds < ActiveRecord::Migration
       t.string     :location
       t.string     :zip_code
       t.float      :price
+      t.date       :date_posted
       t.belongs_to :category
       t.belongs_to :user
 

@@ -1,119 +1,30 @@
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+html {
+  background: url('/images/paper_fibers.png') repeat;
 }
+
+
 th {
   text-align: left;
 }
 
 body{
   font-family: 'Source Sans Pro', sans-serif;
+  letter-spacing: 1.5px;
 }
 
-html{
-  background: url(../images/login_background.png) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+.roboto {
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
-input[type="text"].login, input[type="text"].signup {
-  height: 60px;
-  margin-bottom: 20px;
+.yanone {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
-/* Placeholder Text */
-
-::-webkit-input-placeholder {
-   font-size: 16px;
-   letter-spacing: 1px;
-}
-:-moz-placeholder { /* Firefox 18- */
-   font-size: 18px;
-   letter-spacing: 1px;
-}
-::-moz-placeholder {  /* Firefox 19+ */
-   font-size: 18px;
-   letter-spacing: 1px;
-}
-:-ms-input-placeholder {
-  font-size: 18px;
-  letter-spacing: 1px;
-}
-
-/* End Placeholder */
-
-form .button {
-  background: #404040;
-  border: 1px solid #58585b;
-  color:white;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 600;
-  height:60px;
-}
-
-form .button:hover {
-  background: #4f4f4f;
-}
-
-#loginPage .loginContent {
-  position:absolute;
-  top:40%;
-  left:25%;
-}
-
-#signupPage .signupContent{
-  position:absolute;
-  top:25%;
-  left:25%;
-  margin:0 auto;
-}
-
-#loginPage h1{
-  font-size: 8.75rem;
-  font-weight:600;
-  margin-top: -52px;
-}
-
-#signupPage h1{
+.centered{
+  margin: 0 auto;
   text-align: center;
-  font-size: 6.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: white;
 }
 
-#loginPage h2{
-  font-size: 5.75rem;
-  margin-top: -10px;
-  left: 210px;
-  font-weight: 100;
-}
 
-#loginPage .header {
-  text-transform: uppercase;
-  color: white;
-  letter-spacing: 2px;
-}
-
-.createAccount a{
-  color:white;
-  font-weight:bold;
-  letter-spacing: 1px;
-  margin-left: -13px;
-
-}
-
-.createAccount a:hover{
-  color: #4f4f4f;
-}
-
-input.error{
-  border: 4px solid red !important;
-}
 
 
