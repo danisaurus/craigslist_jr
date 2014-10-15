@@ -22,3 +22,5 @@ gem 'bcrypt'
   gem 'faker'
   gem 'rspec'
 # end
+gem 'carrierwave'
+gem 'mini_magick'

@@ -14,6 +14,13 @@
   <div id="description">
     <p class="classifiedDescription"><%= @classified.description %></p>
   </div>
+  <div id="thumbnails" class="row">
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+      <% @classified.images.each do |image| %>
+        <li><img src="<%= image.image.url %>"></li>
+      <% end %>
+    </ul>
+  </div>
   <div id="classifiedSubhead">
     <p class="condition"><strong>Condition: <%= @classified.condition %></strong></p>
   </div>

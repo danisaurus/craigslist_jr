@@ -1,6 +1,7 @@
 class Classified < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
+  has_many :images
 
   after_initialize :init
 
