@@ -3,7 +3,7 @@
 
 <div class="newPostContainer">
   <h2 class="create yanone">Create Post</h2>
-  <form action '/classifieds' method="post">
+  <form action '/classifieds' method="post" enctype="multipart/form-data">
     <select class=" columns" placeholder="Choose a Category" name="classified[category]">
       <option value="">
         Choose a Category
@@ -22,4 +22,8 @@
     <input placeholder="Zip Code" type="text" name="classified[zip_code]">
     <input class="button radius centered" type="submit" name="submit">
   </form>
+   <form action '/classifieds/new' method="post" enctype="multipart/form-data">
+    <input type="file" value="Upload">
+    <input class="button radius centered" type="submit" name="submit">
+   </form>
 </div>
