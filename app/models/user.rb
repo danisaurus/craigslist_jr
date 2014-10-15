@@ -1,7 +1,10 @@
 class User < ActiveRecord::Base
+  has_many   :classifieds
+  has_many   :avatars, class_name: "Comment"
+  has_many   :comments
 
-  has_many :classifieds
-  validates :full_name, {presence: true}
+  mount_uploader :avatar, ImageUploader
+
   validates :email, {presence: true, uniqueness: true}
   validates :username, {presence:true, uniqueness: true}
   validates :password_hash, presence: true

@@ -1,0 +1,40 @@
+<div class="main-container">
+  <div class="post-title">
+    <ul>
+      <li><a href="/posts/<%= post.id %>"><%= @post.title %></a></li>
+      <li><a href="/users/<%= post.user.id %>"><%= @post.user.name %></a></li>
+    </ul>
+  </div>
+  <div class="post-stats">
+    <ul>
+      <li class="upvotes"><%= @post.upvotes %> upvotes</li>
+      <li class="downvotes"><%= @post.downvotes %> downvotes</li>
+      <li class="comments"><%= @post.comments.count %> comments</li>
+      <li class="posted-at">3hrs ago</li>
+    </ul>
+  </div>
+  <% if @comments %>
+    <% @comments.each do |comment| %>
+        <p><strong><a href="/users/<% comment.user.id %>"><%= comment.user.username %></a></strong></p>
+        <p>3hrs ago</p>
+        <p><%= comment.text %></p>
+        <ul class="user-actions">
+          <li><a href="#">reply</a></li>
+          <li><a href="#">upvote</a></li>
+          <li><a href="#">downvote</a></li>
+        </ul>
+      <% if @replies %>
+        <% @replies.each do |reply| %>
+          <p><strong><a href="/users/<% comment.user.id %>"><%= reply.user.username %></a></strong></p>
+          <p>3hrs ago</p>
+          <p><%= reply.text %></p>
+          <ul class="user-actions">
+            <li><a href="#">reply</a></li>
+            <li><a href="#">upvote</a></li>
+            <li><a href="#">downvote</a></li>
+          </ul>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
