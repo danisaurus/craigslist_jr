@@ -1,0 +1,23 @@
+button {
+  background: #de8642;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: #ffffff;
+}
+
+button:hover {
+  background: #DD7F37;
+}
+
+button a {
+  color: #ffffff;
+}
+
+button a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}

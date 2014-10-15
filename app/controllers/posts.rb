@@ -1,6 +1,6 @@
 get '/posts' do
-  @user =
-  @posts = Posts.all
+  @user = User.find(session[:user_id])
+  @posts = Post.all
   erb :"posts/index"
 end
 
@@ -15,10 +15,10 @@ post '/posts' do
     redirect '/posts'
   else
     erb :"posts/new"
+  end
 end
 
 get '/posts/:post_id' do
   @post = Post.find(params[:post_id])
   @comments = @post.comments
-  @replies = @comments.replies
 end

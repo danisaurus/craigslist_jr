@@ -44,7 +44,7 @@ end
 30.times do
   Comment.create( text: Faker::Lorem.paragraph(5),
                user_id: rand(1..16),
-     parent_comment_id: rand(1..30),
+        parent_comment: rand(1..30),
                upvotes: rand(1..100),
              downvotes: rand(1..100))
 

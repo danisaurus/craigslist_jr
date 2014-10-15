@@ -2,7 +2,6 @@ html {
   background: url('/images/paper_fibers.png') repeat;
 }
 
-
 th {
   text-align: left;
 }
@@ -10,6 +9,26 @@ th {
 body{
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 1.5px;
+}
+
+h2 {
+  font-size: 175px;
+  text-align: center;
+  margin: 30px auto 20px auto;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #de8642;;
+  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+}
+
+a {
+  color: #de8642;
+}
+
+a:hover {
+  color: #DD7F37;
+  text-decoration: underline;
 }
 
 .roboto {
@@ -25,6 +44,19 @@ body{
   text-align: center;
 }
 
+.main-container {
+  width: 60%;
+  margin: 0 auto;
+}
 
+.title-row {
+  margin-bottom: 20px;
+}
+
+
+
+button .action {
+
+}
 
 
