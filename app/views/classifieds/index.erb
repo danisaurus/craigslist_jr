@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="/css/category.css">
 
-<div class="categoriesContainer">
+<div class="main-container">
   <h2 class="yanone">Classifieds</h2>
   <% @categories.each do |category| %>
     <% category.classifieds.each do |classified| %>
-      <p class="classifiedLink">
+      <p class="title-row">
         <span class="favorite"></span>
         <span class="date"><%= classified.date_posted.strftime('%b %d') %></span>
         <a href='/classifieds/<%= classified.id %>'><span class="title"><%= classified.title %></span></a>

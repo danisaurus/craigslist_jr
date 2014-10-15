@@ -1,27 +1,3 @@
-.newPostContainer {
-  width:50%;
-  margin: 30px auto 30px auto;
-  text-align: center;
-}
-
-.classifiedContainer {
-  width:60%;
-  margin: 100px auto 30px auto;
-}
-
-.newPostContainer select {
-  color: #808080;
-  border-radius: 0px !important;
-  background: white;
-  border: 1px solid #cccccc;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.classifiedHeader {
-  margin-bottom: 20px;
-}
-
 h2.create {
   font-size: 125px;
   text-align: center;
@@ -63,30 +39,6 @@ h2.create {
 }
 
 
-.reply {
-  background: #de8642;
-  border-radius: 5px;
-  width: 65px;
-  text-align: center;
-  font-weight: 400;
-  font-size: 18px;
-  padding: 10px 15px 10px 15px;
-  color: #ffffff;
-  letter-spacing: 1.5px;
-}
-
-.reply:hover {
-  background: #DD7F37;
-}
-
-.reply a {
-  color: #ffffff;
-}
-
-.reply a:hover {
-  color: #ffffff;
-  text-decoration: none;
-}
 
 
 /* New Post */

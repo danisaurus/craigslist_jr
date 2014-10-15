@@ -2,12 +2,6 @@ textarea {
   height: 150px;
 }
 
-/*input[type="text"] {
-  border-radius: 3px;
-  height: 50px;
-}*/
-/* Placeholder Text */
-
 ::-webkit-input-placeholder {
    font-size: 16px;
    letter-spacing: 1px;
@@ -22,6 +16,23 @@ textarea {
 }
 :-ms-input-placeholder {
   font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* form containers */
+
+.form-container {
+  width:50%;
+  margin: 30px auto 30px auto;
+  text-align: center;
+}
+
+.form-container select {
+  color: #808080;
+  border-radius: 0px !important;
+  background: white;
+  border: 1px solid #cccccc;
+  font-size: 14px;
   letter-spacing: 1px;
 }
 

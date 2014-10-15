@@ -2,7 +2,9 @@ html {
   background: url('/images/texturetastic_gray.png') repeat;
 }
 
-#loginPage, #signupPage{
+
+
+#login-container, #login-container {
   width: 80%;
   margin: 2% auto 0 auto;
   text-align: center;
@@ -13,7 +15,7 @@ html {
   text-align: center;
 }
 
-#loginPage h1, #signupPage h1 {
+#login-container h1, #login-container h1 {
   font-family: 'Yanone Kaffeesatz', sans-serif !important;
   font-size: 210px;
   text-align: left;
@@ -25,7 +27,7 @@ html {
   text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
 }
 
-#loginPage .subheader{
+#login-container .subheader{
   line-height: 1.4;
   color: #6f6f6f;
   font-weight: normal;
@@ -36,7 +38,7 @@ html {
   width: 600px;
 }
 
-#signupPage h1 {
+#login-container h1 {
   text-align: center;
   margin: 0px auto -30px auto;
 }
@@ -46,7 +48,7 @@ span.list {
   letter-spacing: 1.5px;
 }
 
-#loginPage h3 {
+#login-container h3 {
   text-transform:uppercase;
   font-weight: 100;
   font-size: 4.75rem;
