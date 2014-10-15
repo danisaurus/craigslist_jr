@@ -3,7 +3,7 @@
   <div class="signupContent">
       <h1 class="header">Sign Up<h1>
       <form action="/signup" method="post">
-        <input class="signup radius <%= display_error(@user, :name) %>" type="text" name="user[first_name]" value="<%= @user.first_name %>" placeholder="Full Name">
+        <input class="signup radius <%= display_error(@user, :full_name) %>" type="text" name="user[full_name]" value="<%= @user.full_name %>" placeholder="Full Name">
         <input class="signup radius <%= display_error(@user, :username) %>" type="text" name="user[username]" placeholder="Username">
         <input class="signup radius <%= display_error(@user, :email) %>" type="text" name="user[email]" placeholder="Email">
         <input class="signup radius <%= display_error(@user, :password_hash) %>" type="password" name="user[password]" placeholder="Password">
