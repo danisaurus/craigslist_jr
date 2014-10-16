@@ -1,19 +1,19 @@
-<h2 class="yanone">The Beer Board</h2>
+<h2 class="lg-header yanone">The Beer Board</h2>
   <div class="posts">
     <% @posts.each do |post| %>
       <div class="small-12 medium-12 large-12 columns title-row">
         <div class="title">
           <a href="/posts/<%= post.id %>"><%= post.title %></a>
           <scan class="username">
-          <a href="/users/<%= post.user.id %>"><%= post.user.username %></a>
+          <a href="/users/<%= post.user.id %>">(<%= post.user.username %>)</a>
           </scan>
         </div>
       </div>
       <div class="small-12 medium-12 large-12 columns stats-row">
-        <scan class="upvotes"><%= post.upvotes %> upvotes</scan>
-        <scan class="downvotes"><%= post.downvotes %> downvotes</scan>
-        <scan class="comments"><%= post.comments.count %> comments</scan>
-        <scan class="posted-at">3hrs ago</scan>
+        <scan class="stat upvotes"><%= post.upvotes %> upvotes</scan>
+        <scan class="stat downvotes"><%= post.downvotes %> downvotes</scan>
+        <scan class="stat comments"><%= post.comments.count %> comments</scan>
+        <scan class="stat posted-at">3hrs ago</scan>
       </div>
       <% if @comments %>
         <% @comments.each do |comment| %>
