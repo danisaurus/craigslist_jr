@@ -24,3 +24,5 @@ gem 'bcrypt'
 # end
 gem 'carrierwave'
 gem 'mini_magick'
+
+gem 'sinatra-assetpack'
