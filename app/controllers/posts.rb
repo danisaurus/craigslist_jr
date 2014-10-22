@@ -27,5 +27,5 @@ end
 get '/posts/:post_id/votes' do
   @post = Post.find(params[:post_id])
   @post.upvotes += 1
-  erb :"posts/show"
+  {upvotes: @post.upvotes}
 end

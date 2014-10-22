@@ -1,6 +1,7 @@
 <h2 class="lg-header yanone">The Beer Board</h2>
   <div class="posts">
     <% @posts.each do |post| %>
+      <article id="<%= post.id %>">
       <div class="small-12 medium-12 large-12 columns title-row">
         <div class="title">
           <a href="/posts/<%= post.id %>"><%= post.title %></a>
@@ -11,7 +12,7 @@
       </div>
       <div class="small-12 medium-12 large-12 columns stats-row">
         <span class="stat upvotes"><a href="/post/<%= post.id %>/votes" class="upvote"><%= post.upvotes %> upvotes</a></span>
-        <span class="stat downvotes"><a href="/post/<%= post.id. %>" class="downvote"><%= post.downvotes %> downvotes</a></span>
+        <span class="stat downvotes"><a href="/post/<%= post.id %>" class="downvote"><%= post.downvotes %> downvotes</a></span>
         <span class="stat comments"><%= post.comments.count %> comments </span>
         <span class="stat posted-at">3hrs ago</span>
         <span class="stat post-comment"><a href="/post/<%= post.id %>" class="reply-to-post">Reply to Post</a></span>
@@ -42,4 +43,5 @@
       <% end %>
     <% end %>
   </div>
+</article>
 </div>

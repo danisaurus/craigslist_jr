@@ -1,12 +1,15 @@
 $(document).ready(function(){
 
-  $(".upvote").on("click", function(event){
+  $(".upvotes").on("click", function(event){
     event.preventDefault();
+
+    articleId = $(this).closest("article").attr("id");
+    console.log(articleId)
     $.ajax({
-      url: $(this).attr('href'),
+      url: "/posts/" + articleId + "/votes",
       type: "get",
-      success: function(response){
-        $(this).html(response);
+      success: function(data, status, xhr){
+       console.log(data)
       }
 
     });
