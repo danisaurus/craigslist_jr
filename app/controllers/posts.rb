@@ -23,3 +23,9 @@ get '/posts/:post_id' do
   @comments = @post.comments
   erb :"posts/show"
 end
+
+get '/posts/:post_id/votes' do
+  @post = Post.find(params[:post_id])
+  @post.upvotes += 1
+  erb :"posts/show"
+end

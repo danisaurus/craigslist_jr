@@ -5,4 +5,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   version :thumb do
     process :resize_to_fill => [100,100]
   end
+  def store_dir
+    'public/images'
+  end
 end

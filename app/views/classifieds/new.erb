@@ -2,7 +2,7 @@
 
 <h2 class="sm-header yanone">Create Post</h2>
 <div class="form-container">
-  <form action '/classifieds' method="post" enctype="multipart/form-data">
+  <form action='/classifieds/new' method="post" enctype="multipart/form-data">
     <select class="columns" placeholder="Choose a Category" name="classified[category]">
       <option value="">
         Choose a Category
@@ -19,10 +19,10 @@
     <input placeholder="Price" type="text" name="classified[price]">
     <input placeholder="location" type="text" name="classified[location]">
     <input placeholder="Zip Code" type="text" name="classified[zip_code]">
-    <input class="button radius centered" type="submit" name="submit">
-  </form>
-   <form action '/classifieds/new' method="post" enctype="multipart/form-data">
-    <input type="file" value="Upload">
-    <button class="button radius centered" type="submit" name="submit"></submit>
+    <div>
+      <input type="file" name="image[image]" value="Upload">
+      <a href="#" class="add-image">Add Another Image</a>
+    </div>
+    <button class="button radius centered" type="submit" name="submit">Submit</button>
    </form>
 </div>

@@ -4,16 +4,17 @@
       <div class="small-12 medium-12 large-12 columns title-row">
         <div class="title">
           <a href="/posts/<%= post.id %>"><%= post.title %></a>
-          <scan class="username">
+          <span class="username">
           <a href="/users/<%= post.user.id %>">(<%= post.user.username %>)</a>
-          </scan>
+          </span>
         </div>
       </div>
       <div class="small-12 medium-12 large-12 columns stats-row">
-        <scan class="stat upvotes"><%= post.upvotes %> upvotes</scan>
-        <scan class="stat downvotes"><%= post.downvotes %> downvotes</scan>
-        <scan class="stat comments"><%= post.comments.count %> comments</scan>
-        <scan class="stat posted-at">3hrs ago</scan>
+        <span class="stat upvotes"><a href="/post/<%= post.id %>/votes" class="upvote"><%= post.upvotes %> upvotes</a></span>
+        <span class="stat downvotes"><a href="/post/<%= post.id. %>" class="downvote"><%= post.downvotes %> downvotes</a></span>
+        <span class="stat comments"><%= post.comments.count %> comments </span>
+        <span class="stat posted-at">3hrs ago</span>
+        <span class="stat post-comment"><a href="/post/<%= post.id %>" class="reply-to-post">Reply to Post</a></span>
       </div>
       <% if @comments %>
         <% @comments.each do |comment| %>
@@ -21,9 +22,9 @@
             <p>3hrs ago</p>
             <p><%= comment.text %></p>
             <div class="user-actions">
-              <scan><a href="#">reply</a></scan>
-              <scan><a href="#">upvote</a></scan>
-              <scan><a href="#">downvote</a></scan>
+              <span><a href="#">reply</a></span>
+              <span><a href="#">upvote</a></span>
+              <span><a href="#">downvote</a></span>
             </div>
           <% if @replies %>
             <% @replies.each do |reply| %>
@@ -31,9 +32,9 @@
               <p>3hrs ago</p>
               <p><%= reply.text %></p>
               <div class="user-actions">
-                <scan><a href="#">reply</a></scan>
-                <scan><a href="#">upvote</a></scan>
-                <scan><a href="#">downvote</a></scan>
+                <span><a href="#">reply</a></span>
+                <span><a href="#">upvote</a></span>
+                <span><a href="#">downvote</a></span>
               </div>
             <% end %>
           <% end %>
