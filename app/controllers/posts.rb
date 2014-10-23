@@ -24,8 +24,16 @@ get '/posts/:post_id' do
   erb :"posts/show"
 end
 
-get '/posts/:post_id/votes' do
+post '/posts/:post_id/upvotes' do
   @post = Post.find(params[:post_id])
-  @post.upvotes += 1
-  {upvotes: @post.upvotes}
+  @post.increase_upvotes
+  @post.save
+  {upvotes: @post.upvotes}.to_json
+end
+
+post '/posts/:post_id/downvotes' do
+  @post = Post.find(params[:post_id])
+  @post.increase_downvotes
+  @post.save
+  {downvotes: @post.downvotes}.to_json
 end

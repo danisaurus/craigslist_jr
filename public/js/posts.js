@@ -2,19 +2,41 @@ $(document).ready(function(){
 
   $(".upvotes").on("click", function(event){
     event.preventDefault();
-
-    articleId = $(this).closest("article").attr("id");
+    var current_upvote = $(this);
+    var articleId = $(this).closest("article").attr("id");
     console.log(articleId)
     $.ajax({
-      url: "/posts/" + articleId + "/votes",
-      type: "get",
+      url: "/posts/" + articleId + "/upvotes",
+      type: "post",
+      dataType: 'json',
       success: function(data, status, xhr){
-       console.log(data)
+       current_upvote.text(data.upvotes + " upvotes");
       }
-
     });
+  });
+
+  $(".downvotes").on("click", function(event){
+    event.preventDefault();
+    var current_downvote = $(this);
+    var articleId = $(this).closest("article").attr("id");
+    console.log(articleId)
+    $.ajax({
+      url: "/posts/" + articleId + "/downvotes",
+      type: "post",
+      dataType: 'json',
+      success: function(data, status, xhr){
+       current_downvote.text(data.downvotes + " downvotes");
+      }
+    });
+  });
+
+  $(".post-comment").on("click", function(event){
+    event.preventDefault();
+    new CommentView().render();
+    $(".commentSection").prepend(comment.$commentForm)
 
   });
+
 });
 
 
