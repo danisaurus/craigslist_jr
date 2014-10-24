@@ -1,0 +1,6 @@
+<p><strong><a href="/users/<% comment.user_id %>"><%= comment.user.username %></a></strong><span class="stat time-since-posted">3 hrs ago</p>
+<p class="small-12 medium-12 large-12 columns"><%= comment.text %></p>
+<ul class="user-actions">
+  <li><a href="#" class="upvotes"><i class="fa fa-caret-square-o-up"></i></a> <%= comment.upvotes %> Cheers</li>
+  <li><a href="#" class="downvotes"><i class="fa fa-caret-square-o-down"></i></a> <%= comment.downvotes %> Party Fails</li>
+</ul>

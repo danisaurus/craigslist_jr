@@ -10,7 +10,7 @@ $(document).ready(function(){
       type: "post",
       dataType: 'json',
       success: function(data, status, xhr){
-       current_upvote.text(data.upvotes + " upvotes");
+       current_upvote.find('.cheers').text(data.upvotes + " Cheers");
       }
     });
   });
@@ -25,16 +25,34 @@ $(document).ready(function(){
       type: "post",
       dataType: 'json',
       success: function(data, status, xhr){
-       current_downvote.text(data.downvotes + " downvotes");
+       current_downvote.find('.partyFails').text(data.downvotes + " Party Fails");
       }
     });
   });
 
+
+// post a comment //
+
   $(".post-comment").on("click", function(event){
     event.preventDefault();
-    new CommentView().render();
-    $(".commentSection").prepend(comment.$commentForm)
+    var newCommentForm = new CommentFormView();
+    var commentForm = newCommentForm.createCommentForm();
+  
+    $("#comments").prepend(commentForm)
+  });
 
+
+  $("form").on('submit', '#commentForm', function(event){
+    event.preventDefault();
+    var articleId = $('form').closest('article').attr('id')
+    $.ajax({
+      url: '/posts/'+articleId+'/comments',
+      type: 'post',
+      success: function(response){
+        $('#comments').prepend(response)
+        $('#commentForm').delete();
+      }
+    });
   });
 
 });

@@ -2,45 +2,17 @@
   <div class="posts">
     <% @posts.each do |post| %>
       <article id="<%= post.id %>">
-      <div class="small-12 medium-12 large-12 columns title-row">
-        <div class="title">
-          <a href="/posts/<%= post.id %>"><%= post.title %></a>
+        <div class="small-12 medium-12 large-12 columns title-row">
+          <div class="title">
+            <a href="/posts/<%= post.id %>"><%= post.title %></a>
+          </div>
         </div>
-      </div>
-      <div class="small-12 medium-12 large-12 columns stats-row">
-        <span class="stat upvotes"> <%= post.upvotes %> upvotes </span>
-        <span class="stat downvotes"> <%= post.downvotes %> downvotes </span>
-        <span class="stat comments"> <%= post.comments.count %> comments </span>
-        <span class="stat posted-at"> 3hrs ago </span>
-        <span class="stat post-comment"> Reply to Post </span>
-      </div>
-      <div class="commentSection">
-        <% if @comments %>
-          <% @comments.each do |comment| %>
-              <p><strong><a href="/users/<% comment.user.id %>"><%= comment.user.username %></a></strong></p>
-              <p>3hrs ago</p>
-              <p><%= comment.text %></p>
-              <div class="user-actions">
-                <span><a href="#">reply</a></span>
-                <span><a href="#">upvote</a></span>
-                <span><a href="#">downvote</a></span>
-              </div>
-            <% if @replies %>
-              <% @replies.each do |reply| %>
-                <p><strong><a href="/users/<% comment.user.id %>"><%= reply.user.username %></a></strong></p>
-                <p>3hrs ago</p>
-                <p><%= reply.text %></p>
-                <div class="user-actions">
-                  <span><a href="#">reply</a></span>
-                  <span><a href="#">upvote</a></span>
-                  <span><a href="#">downvote</a></span>
-                </div>
-              <% end %>
-            <% end %>
-          <% end %>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-</article>
+        <div class="small-12 medium-12 large-12 columns stats-row">
+          <span class="stat upvotes"><a href="#"><i class="fa fa-caret-square-o-up"></i></a><span class="cheers"> <%= post.upvotes %> Cheers </span></span>
+          <span class="stat downvotes"><a href="#"><i class="fa fa-caret-square-o-down"></i></a><span class="partyFails"> <%= post.downvotes %> Party Fails </span></span>
+          <span class="stat posted-at"> 3hrs ago </span>
+        </div>
+      <% end %>
+      </article>
+    </div>
 </div>

@@ -37,3 +37,4 @@ post '/posts/:post_id/downvotes' do
   @post.save
   {downvotes: @post.downvotes}.to_json
 end
+
