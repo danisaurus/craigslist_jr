@@ -1,3 +1,5 @@
+$(document).foundation();
+
 $(document).ready(function(){
 
     $(".add-image").on("click", function(event){
