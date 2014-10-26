@@ -4,8 +4,8 @@ add_import_path "bower_components/foundation/scss"
 http_path = "/"
 css_dir = "public/stylesheets"
 sass_dir = "scss"
-images_dir = "images"
-javascripts_dir = "js"
+images_dir = "public/images"
+javascripts_dir = "public/js"
 
 if Gem.loaded_specs["sass"].version >= Gem::Version.create('3.4')
   warn "You're using Sass 3.4 or higher to compile Foundation. This version causes CSS classes to output incorrectly, so we recommend using Sass 3.3 or 3.2."
