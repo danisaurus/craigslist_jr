@@ -12,4 +12,27 @@ configure do
   set :views, File.join(Sinatra::Application.root, "app", "views")
 end
 
+
+assets do
+  serve '/js', from: 'public/js'
+  serve '/bower_components', from: 'bower_components'
+
+  js :modernizr, [
+    '/bower_components/modernizr/modernizr.js',
+  ]
+
+  js :libs, [
+    '/bower_components/jquery/dist/jquery.js',
+    '/bower_components/foundation/js/foundation.js'
+  ]
+
+  js :application, [
+    '/js/app.js'
+  ]
+
+  js_compression :jsmin
+
+end
+
+
 run Sinatra::Application

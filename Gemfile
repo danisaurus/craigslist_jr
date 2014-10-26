@@ -7,6 +7,7 @@ gem 'pg'
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
+gem 'sinatra-assetpack'
 
 # Use Thin for our web server
 gem 'thin'
@@ -25,4 +26,5 @@ gem 'bcrypt'
 gem 'carrierwave'
 gem 'mini_magick'
 
-gem 'sinatra-assetpack'
+gem "sass", "~> 3.3.0"
+gem "compass", "~> 1.0"
