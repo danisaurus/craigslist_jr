@@ -7,17 +7,16 @@ button {
   text-align: center;
   letter-spacing: 1.5px;
   color: #ffffff;
-}
 
-button:hover {
-  background: #DD7F37;
-}
+  &:hover {
+    background: #DD7F37;
+  }
 
-button a {
-  color: #ffffff;
-}
-
-button a:hover {
-  color: #ffffff;
-  text-decoration: none;
+  a {
+    color: #ffffff;
+    &:hover {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
 }
