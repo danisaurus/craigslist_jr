@@ -1,0 +1,40 @@
+/*
+Syntax error: Invalid CSS after "@import "nav"": expected selector or at-rule, was "@import "buttons""
+        on line 5 of /Users/d_dirks/work/craigslist_jr/scss/app.scss
+
+1: @import "settings";
+2: @import "foundation";
+3: @import "classifieds";
+4: @import "nav"
+5: @import "buttons"
+6: 
+7: 
+8: html {
+9:   background: url('/images/paper_fibers.png') repeat;
+10: }
+
+Backtrace:
+/Users/d_dirks/work/craigslist_jr/scss/app.scss:5
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/scss/parser.rb:1312:in `expected'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/scss/parser.rb:1248:in `expected'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/scss/parser.rb:42:in `parse'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/engine.rb:409:in `_to_tree'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/engine.rb:274:in `render'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:484:in `update_stylesheet'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:214:in `block in update_stylesheets'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:208:in `each'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:208:in `update_stylesheets'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:462:in `on_file_changed'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/lib/sass/plugin/compiler.rb:324:in `block in watch'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Users/d_dirks/.rbenv/versions/2.0.0-p481/lib/ruby/gems/2.0.0/gems/sass-3.3.14/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"@import \"nav\"\": expected selector or at-rule, was \"@import \"buttons\"\"\A         on line 5 of /Users/d_dirks/work/craigslist_jr/scss/app.scss\A \A 1: @import \"settings\";\A 2: @import \"foundation\";\A 3: @import \"classifieds\";\A 4: @import \"nav\"\A 5: @import \"buttons\"\A 6: \A 7: \A 8: html {\A 9:   background: url('/images/paper_fibers.png') repeat;\A 10: }"; }
