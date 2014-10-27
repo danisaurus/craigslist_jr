@@ -3,14 +3,14 @@ nav {
   background: url('/images/texturetastic_gray.png') repeat;
   height: 72px;
 
-  .box-shadow {
+  &.box-shadow {
     position:relative;
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   }
 
-  .box-shadow:before, .box-shadow:after {
+  &.box-shadow:before, &.box-shadow:after {
     content:"";
     position:absolute;
     z-index:-1;
@@ -25,7 +25,7 @@ nav {
     border-radius:100px / 10px;
   }
 
-  .box-shadow:after {
+  &.box-shadow:after {
     right:10px;
       left:auto;
       -webkit-transform:skew(8deg) rotate(3deg);

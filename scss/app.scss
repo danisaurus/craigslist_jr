@@ -1,25 +1,24 @@
 @import "settings";
 @import "foundation";
 @import "classifieds";
-@import "nav"
-@import "buttons"
+@import "nav";
+@import "buttons";
+@import "form";
+@import "login";
 
 
-html {
-  background: url('/images/paper_fibers.png') repeat;
-}
 
 th {
   text-align: left;
 }
 
 body{
-  font-family: 'Source Sans Pro', sans-serif;
-  letter-spacing: 1.5px;
+	background: url('/images/paper_fibers.png') repeat;
+	letter-spacing: 1.5px;
 }
 
 h2 {
-	.lg-header {
+	&.lg-header {
 	  font-size: 175px;
 	  text-align: center;
 	  margin: 30px auto 20px auto;
@@ -29,7 +28,7 @@ h2 {
 	  color: #de8642;
 	  text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
 	}
-	.sm-header {
+	&.sm-header {
 	  font-size: 125px;
 	  text-align: center;
 	  margin: 20px auto 20px auto;
