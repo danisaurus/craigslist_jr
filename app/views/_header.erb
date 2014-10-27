@@ -1,11 +1,9 @@
-<link rel="stylesheet" href="/css/header.css">
-
 <nav class="box-shadow">
   <div class="nav-inner">
     <div class="kegs yanone">Kegs<span class="list">List</span></div>
     <% if session[:user_id] != nil %>
       <ul>
-      	<li class="nav-link">Classifieds</li>
+      	<li class="nav-link"><a href="/classifieds">Classifieds</li>
       	<li class="nav-link">What's Brewing</li>
       	<li class="nav-link">Grab A Beer</li>
       	<li class="nav-link"><a href="/posts">Community</a></li>
